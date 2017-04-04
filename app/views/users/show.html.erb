@@ -21,6 +21,7 @@
   <td><%= booking.num_guests %></td>
   <td><%= booking.total_price %></td>
   <td><%= link_to "Cancel Booking", booking_path(booking), method: :delete %></td>
+  <td><%= link_to "Pay", new_booking_payment_path(booking) %></td>
 </tr>
 <% end %>
 </table>

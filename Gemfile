@@ -67,6 +67,7 @@ gem 'clearance'
  gem "carrierwave"
  gem "mini_magick"
  gem "bootstrap-sass"
+ gem "braintree"
 
  #datepicker
  gem 'bootstrap-datepicker-rails'

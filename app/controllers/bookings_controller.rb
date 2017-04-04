@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.new(reformat_params)
     @booking.listing_id = @listing.id
       if @booking.save
-        ReservationMailer.notification_email(current_user.email, @listing.user, @booking.listing.id, @booking.id).deliver_now
+        # ReservationMailer.notification_email(current_user.email, @listing.user, @booking.listing.id, @booking.id).deliver_now
         redirect_to current_user
       else
       flash[:error] = @booking.errors.full_messages
