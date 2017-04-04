@@ -1,0 +1,29 @@
+<h1>Title: <%= @listing.title %></h1>
+<% @listing.images.each do |image| %>
+  <%= image_tag image %>
+<% end %>
+<div>
+  Posted by<%= @listing.user.email%>
+</div>
+<p>Description: <%= @listing.description %></p>
+<p>Max Guests: <%= @listing.max_guest %></p>
+<p>Price: <%= @listing.price %></p>
+<%= link_to "Edit", edit_listing_path(@listing) %>
+
+<%= form_for [@listing, @booking] do |form| %>
+  <div class="form_goup">
+    <%= form.label :start_date %>
+    <%= form.text_field :start_date, class: "datepicker form-control" %>
+  </div>
+  <div class="form_goup">
+    <%= form.label :end_date %>
+    <%= form.text_field :end_date, class: "datepicker form-control " %>
+  </div>
+  <div class="form_goup">
+    <%= form.label :num_guests %>
+    <%= form.number_field :num_guests, class: "form-control" %>
+  </div>
+  <div class="form_goup">
+    <%= form.submit "Submit", class: "btn btn-default" %>
+  </div>
+<% end %>

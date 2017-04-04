@@ -1,0 +1,18 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-datepicker";
+.jumbotron {
+  background-image: url("/appart.png");
+    // background-color: #17234E;
+    text-align: center;
+    color:white;
+    background-position: center;
+    height: 500px;
+    background-size: 100%;
+    padding-left: 100px;
+
+}
+
+.table-striped {
+  text-align: center;
+}
